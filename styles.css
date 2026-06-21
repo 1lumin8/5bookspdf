@@ -27,7 +27,7 @@ body {
     radial-gradient(circle at 10% 0%, rgba(201, 154, 67, 0.18), transparent 26rem),
     linear-gradient(180deg, #fbf7ef 0%, #eee6d8 100%);
   color: var(--ink);
-  font-family: ui-serif, Georgia, "Times New Roman", "Apple SD Gothic Neo", "Noto Serif KR", serif;
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Noto Sans KR", "Segoe UI", sans-serif;
 }
 
 button,
@@ -42,10 +42,7 @@ main {
 }
 
 .hero {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) auto;
-  gap: 28px;
-  align-items: end;
+  display: block;
   padding: 56px 0 24px;
 }
 
@@ -71,8 +68,10 @@ p {
 
 h1 {
   margin-bottom: 12px;
-  font-size: clamp(2.3rem, 5vw, 5rem);
-  line-height: 0.98;
+  font-size: clamp(3rem, 6vw, 5.5rem);
+  font-weight: 800;
+  letter-spacing: 0;
+  line-height: 0.95;
 }
 
 .intro {
@@ -81,47 +80,6 @@ h1 {
   color: var(--muted);
   font-size: 1.08rem;
   line-height: 1.7;
-}
-
-.hero-mark {
-  position: relative;
-  width: 156px;
-  height: 156px;
-  border: 2px solid var(--ink);
-  border-radius: 48% 52% 45% 55%;
-  background: rgba(255, 253, 248, 0.62);
-  transform: rotate(-2deg);
-}
-
-.hero-mark span {
-  position: absolute;
-  display: block;
-  border: 2px solid var(--accent-dark);
-}
-
-.hero-mark span:nth-child(1) {
-  left: 72px;
-  top: 28px;
-  width: 14px;
-  height: 92px;
-  background: var(--accent);
-}
-
-.hero-mark span:nth-child(2) {
-  left: 44px;
-  top: 55px;
-  width: 70px;
-  height: 14px;
-  background: var(--gold);
-}
-
-.hero-mark span:nth-child(3) {
-  left: 42px;
-  bottom: 24px;
-  width: 74px;
-  height: 22px;
-  border-radius: 50%;
-  border-top: 0;
 }
 
 .tabs {
@@ -658,10 +616,6 @@ h1 {
   .hero {
     grid-template-columns: 1fr;
     padding-top: 34px;
-  }
-
-  .hero-mark {
-    display: none;
   }
 
   .tabs {
